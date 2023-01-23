@@ -1,0 +1,27 @@
+<div id="form">
+  <h2>Login</h2>
+  <form action="/auth/login" method="POST">
+    <label>
+      Email
+      <input
+        type="email"
+        name="email"
+        placeholder="rockstar@ironhack.com"
+        required="true"
+      />
+    </label>
+    <label>Password
+      <input
+        type="password"
+        name="password"
+        placeholder="********"
+        required="true"
+      />
+    </label>
+    <button type="submit">Login</button>
+    <a href="/auth/signup">Not registered yet? Sign up!</a>
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
